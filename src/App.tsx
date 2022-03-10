@@ -1,9 +1,14 @@
+import {
+  ReactQueryClientProvider,
+  ReactQueryDevtools,
+} from "components/ReactQuery";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <ReactQueryClientProvider>
+      <div className="App">Test</div>
+      <ReactQueryDevtools />
+    </ReactQueryClientProvider>
   );
 }
 
