@@ -4,8 +4,8 @@ import {
 } from "components/ReactQuery";
 import { Suspense } from "react";
 import { IntlProvider } from "./components/Translation";
-import { UsersTable } from "./modules/user/application";
-import { CommentsTable } from "./modules/comments/application";
+import { UsersTable } from "./modules/user/presentation";
+import { CommentsTable } from "./modules/comments/presentation";
 
 function App() {
   return (
