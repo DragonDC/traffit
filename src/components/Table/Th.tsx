@@ -10,6 +10,7 @@ const Th = ({ children, ...restProps }: IThProps) => {
 
 const StyledTh = styled.th`
   padding: 10px;
+  border: 1px solid lightsteelblue;
 `;
 
 export { Th };

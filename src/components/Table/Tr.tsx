@@ -9,6 +9,7 @@ const Tr = ({ children, ...restProps }: ITrProps) => {
 
 const StyledTr = styled.tr`
   padding: 10px;
+  border: 1px solid lightsteelblue;
 `;
 
 export { Tr };
