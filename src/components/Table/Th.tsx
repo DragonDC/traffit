@@ -1,9 +1,10 @@
 import { ThHTMLAttributes } from "react";
 import styled from "styled-components";
 
-export interface ITh extends ThHTMLAttributes<HTMLTableHeaderCellElement> {}
+export interface IThProps
+  extends ThHTMLAttributes<HTMLTableHeaderCellElement> {}
 
-const Th = ({ children, ...restProps }: ITh) => {
+const Th = ({ children, ...restProps }: IThProps) => {
   return <StyledTh {...restProps}>{children}</StyledTh>;
 };
 

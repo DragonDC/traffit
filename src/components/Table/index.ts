@@ -1,8 +1,10 @@
 export { TableHead } from "./TableHead";
-export type { ITableHead } from "./TableHead";
+export type { ITableHeadProps } from "./TableHead";
 export { TableRow } from "./TableRow";
-export type { ITableRow } from "./TableRow";
+export type { ITableRowProps } from "./TableRow";
 export { Th } from "./Th";
-export type { ITh } from "./Th";
+export type { IThProps } from "./Th";
 export { Tr } from "./Tr";
-export type { ITr } from "./Tr";
+export type { ITrProps } from "./Tr";
+export { Table } from "./Table";
+export type { ITableProps } from "./Table";

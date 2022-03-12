@@ -1,9 +1,9 @@
 import { HTMLAttributes } from "react";
 import styled from "styled-components";
 
-export interface ITableHead extends HTMLAttributes<HTMLTableRowElement> {}
+export interface ITableHeadProps extends HTMLAttributes<HTMLTableRowElement> {}
 
-const TableHead = ({ children, ...restProps }: ITableHead) => {
+const TableHead = ({ children, ...restProps }: ITableHeadProps) => {
   return <StyledTableHead {...restProps}>{children}</StyledTableHead>;
 };
 
