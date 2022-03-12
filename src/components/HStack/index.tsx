@@ -1,5 +1,6 @@
-import { IChildrenProp } from "types";
 import styled from "styled-components";
+
+import { IChildrenProp } from "types";
 
 export interface IHStackProps extends IChildrenProp, IContainerProps {}
 

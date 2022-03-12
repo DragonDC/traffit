@@ -12,8 +12,6 @@ function App() {
       <Layout>
         <Suspense fallback={() => "...loading"}>
           <Routes />
-          {/*<UsersTable />*/}
-          {/*<CommentsTable />*/}
         </Suspense>
       </Layout>
       <ReactQueryDevtools />
