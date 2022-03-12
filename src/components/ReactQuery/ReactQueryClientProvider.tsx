@@ -1,4 +1,3 @@
-import { IChildrenProp } from "types";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { QueryClientProviderProps } from "react-query/types/react/QueryClientProvider";
 import { ReactNode } from "react";
