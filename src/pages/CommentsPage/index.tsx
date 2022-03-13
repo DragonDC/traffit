@@ -8,7 +8,7 @@ const CommentsPage = () => {
   const { formatMessage } = useFormattedMessage();
 
   return (
-    <VStack gap="25px">
+    <VStack gap="25px" style={{ width: "100%" }}>
       <PageTitle
         title={formatMessage({
           id: "comments-page-title",
