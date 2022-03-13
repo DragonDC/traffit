@@ -1,7 +1,8 @@
 import { UsersTable } from "modules/user/presentation";
-import { PageTitle } from "../../components/PageTitle";
-import { useFormattedMessage } from "../../components/Translation";
-import { VStack } from "../../components/VStack";
+
+import { PageTitle } from "components/PageTitle";
+import { useFormattedMessage } from "components/Translation";
+import { VStack } from "components/VStack";
 
 const UsersPage = () => {
   const { formatMessage } = useFormattedMessage();
