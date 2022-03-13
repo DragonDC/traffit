@@ -9,9 +9,11 @@ import { TableHeader } from "./TableHeader";
 
 interface IProps {
   comments: IComment[];
+  total: number;
+  limit: number;
 }
 
-const CommentsTableDesktop = ({ comments }: IProps) => {
+const CommentsTableDesktop = ({ comments, total, limit }: IProps) => {
   return (
     <VStack gap="20px">
       <Table>
@@ -29,7 +31,7 @@ const CommentsTableDesktop = ({ comments }: IProps) => {
           })}
         </TableBody>
       </Table>
-      <Pagination total={500} limit={10} />
+      <Pagination total={total} limit={limit} />
     </VStack>
   );
 };
