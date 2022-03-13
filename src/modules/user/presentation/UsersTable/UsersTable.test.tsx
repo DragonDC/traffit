@@ -7,6 +7,8 @@ import { createUser } from "utils/test/mocks";
 import { IUser } from "modules/user/types";
 
 import { UsersTable } from "./index";
+import { IComment } from "../../../comments/types";
+import { CommentsTable } from "../../../comments/presentation";
 
 const server = setupServer();
 
@@ -39,5 +41,17 @@ describe("Users table", () => {
     });
   });
 
-  it("should render error state when there is error status in response", async () => {});
+  it("should render error state when there is error status in response", async () => {
+    //given
+    server.use(mswGet<IUser[]>(`users`, () => [], 500));
+    render(<UsersTable />);
+    //when
+
+    //then
+    await waitFor(() => {
+      expect(
+        screen.getByText("Encounter server error", { exact: false })
+      ).toBeInTheDocument();
+    });
+  });
 });

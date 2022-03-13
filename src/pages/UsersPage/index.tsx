@@ -8,7 +8,7 @@ const UsersPage = () => {
   const { formatMessage } = useFormattedMessage();
 
   return (
-    <VStack gap="25px">
+    <VStack gap="25px" style={{ width: "100%" }}>
       <PageTitle
         title={formatMessage({
           id: "users-page-title",
