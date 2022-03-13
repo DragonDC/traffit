@@ -1,32 +1,26 @@
 import { useGetUsers } from "modules/user/infrastructure";
-import { UserAddress } from "modules/user/presentation";
 
-import { Table, TableBody, TableRow, Td } from "components/Table";
+import { useCheckMobile } from "utils/useCheckIsMobile";
 
-import { TableHeader } from "./TableHeader";
+import { UsersTableDesktop } from "./UsersTableDesktop";
+import { UsersMobile } from "./UsersMobile";
 
 const UsersTable = () => {
   const { data } = useGetUsers();
+  const isMobile = useCheckMobile();
+
+  if (!data) {
+    return <div>Found no data</div>;
+  }
 
   return (
-    <Table>
-      <TableHeader />
-      <TableBody>
-        {data?.map((user) => {
-          return (
-            <TableRow>
-              <Td>{user.username}</Td>
-              <Td>{user.name}</Td>
-              <Td>{user.email}</Td>
-              <Td>
-                <UserAddress userAddress={user.address} />
-              </Td>
-              <Td>{user.phone}</Td>
-            </TableRow>
-          );
-        })}
-      </TableBody>
-    </Table>
+    <>
+      {isMobile ? (
+        <UsersMobile users={data} />
+      ) : (
+        <UsersTableDesktop users={data} />
+      )}
+    </>
   );
 };
 
