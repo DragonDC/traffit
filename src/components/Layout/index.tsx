@@ -20,8 +20,8 @@ const ChildrenContainer = styled.div`
   margin-right: auto;
   margin-top: 40px;
   display: flex;
-  width: 70%;
   height: 100%;
+  justify-content: center;
 `;
 
 export { Layout };

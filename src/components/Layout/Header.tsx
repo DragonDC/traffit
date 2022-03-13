@@ -13,7 +13,7 @@ const Header = () => {
         <StyledLink to="/">
           {formatMessage({
             id: "header-navigation-link-comments",
-            defaultMessage: "CommentsPage",
+            defaultMessage: "Comments",
           })}
         </StyledLink>
         <StyledLink to="/users">
