@@ -4,15 +4,18 @@ import { IntlProvider } from "components/Translation";
 import { ReactQueryClientProvider } from "components/ReactQuery";
 
 import { IChildrenProp } from "../../types";
+import { ErrorBoundary } from "../ErrorBoundary";
 
 interface IProps extends IChildrenProp {}
 
 const Providers = ({ children }: IProps) => {
   return (
     <BrowserRouter>
-      <ReactQueryClientProvider>
-        <IntlProvider>{children}</IntlProvider>
-      </ReactQueryClientProvider>
+      <ErrorBoundary>
+        <ReactQueryClientProvider>
+          <IntlProvider>{children}</IntlProvider>
+        </ReactQueryClientProvider>
+      </ErrorBoundary>
     </BrowserRouter>
   );
 };

@@ -38,5 +38,17 @@ describe("Comments table", () => {
     });
   });
 
-  it("should render error state when there is error status in response", async () => {});
+  it("should render error state when there is error status in response", async () => {
+    //given
+    server.use(mswGet<IComment[]>(`comments`, () => [], 500));
+    render(<CommentsTable />);
+    //when
+
+    //then
+    await waitFor(() => {
+      expect(
+        screen.getByText("Encounter server error", { exact: false })
+      ).toBeInTheDocument();
+    });
+  });
 });

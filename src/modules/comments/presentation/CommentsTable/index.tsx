@@ -1,13 +1,17 @@
 import { useSearchParams } from "react-router-dom";
+import { Suspense } from "react";
 
 import { useGetComments } from "modules/comments/infrastructure";
 
 import { useCheckMobile } from "utils/useCheckIsMobile";
 
+import { ErrorBoundary } from "components/ErrorBoundary";
+import { Spinner } from "components/Spinner";
+
 import { CommentsTableDesktop } from "./CommentsTableDesktop";
 import { CommentsMobile } from "./CommentsMobile";
 
-const CommentsTable = () => {
+const CommentsTableThrowable = () => {
   const [searchParams] = useSearchParams();
   const _page = Number(searchParams.get("_page")) || 0;
   const _limit = 10;
@@ -31,6 +35,16 @@ const CommentsTable = () => {
         <CommentsTableDesktop comments={data} total={total} limit={_limit} />
       )}
     </>
+  );
+};
+
+const CommentsTable = () => {
+  return (
+    <ErrorBoundary>
+      <Suspense fallback={<Spinner />}>
+        <CommentsTableThrowable />
+      </Suspense>
+    </ErrorBoundary>
   );
 };
 
