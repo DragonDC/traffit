@@ -14,6 +14,10 @@ node version: 16.14.0
 
 In the project directory, you can run:
 
+### `yarn install`
+
+Install node modules
+
 ### `yarn start`
 
 Runs the app in the development mode.\
