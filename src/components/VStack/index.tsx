@@ -1,8 +1,6 @@
 import { HTMLAttributes } from "react";
 import styled from "styled-components";
 
-import { IChildrenProp } from "types";
-
 export interface IVStackProps
   extends IContainerProps,
     HTMLAttributes<HTMLDivElement> {}
