@@ -16,7 +16,7 @@ interface IProps {
 const CommentsTableDesktop = ({ comments, total, limit }: IProps) => {
   return (
     <VStack gap="20px">
-      <Table>
+      <Table id="comments-desktop-table">
         <TableHeader />
         <TableBody>
           {comments.map((comment) => {
