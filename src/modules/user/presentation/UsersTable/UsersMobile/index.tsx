@@ -9,7 +9,7 @@ interface IProps {
 }
 const UsersMobile = ({ users }: IProps) => {
   return (
-    <VStack gap="20px">
+    <VStack gap="20px" id="users-mobile">
       {users.map((user) => {
         return <UserTile user={user} />;
       })}

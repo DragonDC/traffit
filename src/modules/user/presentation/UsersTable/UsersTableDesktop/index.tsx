@@ -11,7 +11,7 @@ interface IProps {
 
 const UsersTableDesktop = ({ users }: IProps) => {
   return (
-    <Table>
+    <Table id="users-desktop-table">
       <TableHeader />
       <TableBody>
         {users.map((user) => {

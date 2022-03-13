@@ -2,8 +2,8 @@ import { Suspense } from "react";
 
 import { ReactQueryDevtools } from "components/ReactQuery";
 import { Layout } from "components/Layout";
+import { Providers } from "components/Providers";
 
-import { Providers } from "./Providers";
 import { Routes } from "./Routes";
 
 function App() {
