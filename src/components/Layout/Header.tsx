@@ -10,13 +10,13 @@ const Header = () => {
   return (
     <StyledHeader>
       <HStack gap="30px">
-        <StyledLink to="/">
+        <StyledLink to="/" id="header-navigation-link-comments">
           {formatMessage({
             id: "header-navigation-link-comments",
             defaultMessage: "Comments",
           })}
         </StyledLink>
-        <StyledLink to="/users">
+        <StyledLink to="/users" id="header-navigation-link-users">
           {formatMessage({
             id: "header-navigation-link-users",
             defaultMessage: "Users",
