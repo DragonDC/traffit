@@ -9,7 +9,8 @@ const UsersTable = () => {
   const { data } = useGetUsers();
   const isMobile = useCheckMobile();
 
-  if (!data) {
+  if (!data || data.length === 0) {
+    //@todo: Some fancy empty state component which could be reused in another views
     return <div>Found no data</div>;
   }
 
