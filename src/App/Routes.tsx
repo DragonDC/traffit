@@ -1,7 +1,7 @@
 import { Route, Routes as ReactRouterRoutes } from "react-router-dom";
 
 import { UsersPage } from "pages/UsersPage";
-import { CommentsPage } from "../pages/CommentsPage";
+import { CommentsPage } from "pages/CommentsPage";
 
 const Routes = () => {
   return (

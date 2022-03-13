@@ -1,8 +1,8 @@
 import ReactPaginate from "react-paginate";
+import styled from "styled-components";
+import { createSearchParams, useNavigate } from "react-router-dom";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "components/Icons";
-import { createSearchParams, useNavigate } from "react-router-dom";
-import styled from "styled-components";
 
 interface IProps {
   limit: number;
